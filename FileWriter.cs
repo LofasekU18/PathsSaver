@@ -1,19 +1,20 @@
 using System.IO;
 using System.Text;
-class FileWriter
+public class FileWriter
 {
+    // private const int MaxRowsPerFile = 60000;
+    // private int _fileIndex = 0;
+    // private int _recordCounter = 0;
     private string _path;
-    private List<string> _listOfPaths;
-    public FileWriter(string path, List<string> listOfPaths)
+    public FileWriter(string path)
     {
-        _path = path ?? Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\result.txt";
-        _listOfPaths = listOfPaths;
+        _path = path;
     }
-    public async Task WriteDataAsync()
+    public async Task WriteDataAsync(List<string> listOfPaths)
     {
         using (var writer = new StreamWriter(_path, false, Encoding.UTF8))
         {
-            foreach (var record in _listOfPaths)
+            foreach (var record in listOfPaths)
             {
                 await writer.WriteLineAsync(record);
             }
