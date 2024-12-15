@@ -1,13 +1,13 @@
 using System.Data.OleDb;
-class DbReader
+public class DbReader
 {
     private string _connectionString;
     private string _query;
 
-    public DbReader(string connectionString, string query)
+    public DbReader(Configuration configuration)
     {
-        _connectionString = connectionString ?? "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=J:\\odposta.mdb;";
-        _query = query ?? "";
+        _connectionString = configuration.ConnectionString;
+        _query = configuration.Query;
     }
     public async Task<List<string>> DbReadAsync()
     {
