@@ -6,6 +6,7 @@ public class View
     }
     public void WaitForUser()
     {
+        Console.WriteLine("Press keyboard to continue");
         Console.ReadLine();
     }
 }
