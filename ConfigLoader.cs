@@ -9,7 +9,7 @@ public class Configuration
     [XmlElement("query")]
     public string Query { get; set; }
     [XmlElement("resultPath")]
-    public string ResultPath { get; set; } = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\result.txt";
+    public string ResultPath { get; set; }
 }
 public class ConfigLoader
 {
