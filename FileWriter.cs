@@ -8,7 +8,7 @@ public class FileWriter
     private string _path;
     public FileWriter(string path)
     {
-        _path = path;
+        _path = path ?? Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\result.txt";
     }
     public async Task WriteDataAsync(List<string> listOfPaths)
     {
