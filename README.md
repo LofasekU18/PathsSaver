@@ -1,6 +1,6 @@
 # PathSaver
 
-PathSaver is a tool to get paths of files from MsAccessDb via OleDB and save to text file.
+PathSaver is a tool to get paths of files from MsAccessDb via OleDB and save to text file, but basiclly can be use for load whatever collum from MsAccess to file, I builded it, because MsAccess2003 file(.mdb) cannot copy more than 65k objects, so for training I choose this way. 
 
 ## Install & Run
 ### 1. Download .NET SDK from Microsoft 
